@@ -1,21 +1,20 @@
 import {useState} from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import './App.css'
-import Home from './pages/home'
-import Inicio from './pages/Inicio'
+import Home from './pages/Home'
 
 
 const App = () => {
 
-  const [color] = useState("#eb8d04")
+  const [color] = useState("#1b85bc")
   document.body.style.backgroundColor = color
 
   return (
     <div className='bg-white border' fluid>
       <div>
-        <Routes>
+        <BrowserRouter>
           <Route path='/home' element={<Home/>}/>
-        </Routes>
+        </BrowserRouter>
         </div> 
     </div>
   )
